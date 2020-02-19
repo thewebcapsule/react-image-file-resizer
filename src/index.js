@@ -7,11 +7,11 @@ class Resizer {
 
     static changeHeightWidth(height, maxHeight, width, maxWidth) {
         if (width > maxWidth) {
-            height = Math.round(height * maxWidth / width);
+            height = maxHeight;
             width = maxWidth;
         }
         if (height > maxHeight) {
-            width = Math.round(width * maxHeight / height);
+            width = maxWidth;
             height = maxHeight;
         }
         return {height, width}
